@@ -65,3 +65,6 @@ Route::get('post/judul/{title}', 'PostController@search_title');
 Route::get('post/edit/{id}/{title}/{content}', 'PostController@edit');
 Route::get('post/tambah/{title}/{content}', 'PostController@tambah');
 Route::get('post/delete/{id}', 'PostController@hapus');
+
+//route post siswa
+Route::get('SISWA', 'SiswaController@tampil');

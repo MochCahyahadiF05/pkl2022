@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostTable extends Migration
+class CreateSiswasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreatePostTable extends Migration
      */
     public function up()
     {
-        Schema::create('post', function (Blueprint $table) {
+        Schema::create('siswas', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->unique();
-            $table->text('content');
+            $table->string('nama');
+            $table->string('nis')->unique();
+            $table->date('tgl_lahir');
+            $table->text('alamat');
+            $table->string('jk');
+            //tipe data nomor integer
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreatePostTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('siswas');
     }
 }
