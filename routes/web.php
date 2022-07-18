@@ -57,3 +57,11 @@ Route::get('dosen', 'LatihanController@dosen');
 Route::get('kampus', 'LatihanController@mhs');
 Route::get('sekola', 'LatihanController@sekola');
 Route::get('belanjaan', 'LatihanController@belanjaan');
+
+// route post
+Route::get('post', 'PostController@tampil');
+Route::get('post/{id}', 'PostController@search');
+Route::get('post/judul/{title}', 'PostController@search_title');
+Route::get('post/edit/{id}/{title}/{content}', 'PostController@edit');
+Route::get('post/tambah/{title}/{content}', 'PostController@tambah');
+Route::get('post/delete/{id}', 'PostController@hapus');
